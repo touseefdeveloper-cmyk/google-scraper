@@ -5,7 +5,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "american-vision-windows",
@@ -13,7 +13,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "one-week-bath",
@@ -21,7 +21,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "abc-pro",
@@ -29,7 +29,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "1-degree-construction",
@@ -37,7 +37,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "mr-cabinet-care",
@@ -45,7 +45,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "payless-kitchen-cabinets",
@@ -53,7 +53,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "payless-bath-makeover",
@@ -61,7 +61,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "adar-builders",
@@ -69,7 +69,7 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   },
   {
     "id": "gm-home-remodeling",
@@ -77,6 +77,6 @@
     "average_rating": null,
     "total_reviews": null,
     "google_maps_url": null,
-    "error": "API status: REQUEST_DENIED — You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+    "error": "API status: REQUEST_DENIED — You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started"
   }
 ]
