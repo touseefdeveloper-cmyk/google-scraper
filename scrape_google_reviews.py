@@ -1,9 +1,11 @@
 import requests
 import json
 import os
+import sys
 
 API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "")
 PLACES_URL = "https://maps.googleapis.com/maps/api/place/details/json"
+OUTPUT_FILE = "google_reviews.json"
 
 BUSINESSES = [
     {"id": "cabinet-refresh",          "place_id": "ChIJTceywKawwoAR7P0e_XuYHv0"},
@@ -17,6 +19,15 @@ BUSINESSES = [
     {"id": "adar-builders",            "place_id": "ChIJh8iSdLi_woARrk1Bs0DDlbw"},
     {"id": "gm-home-remodeling",       "place_id": "ChIJr_Cg4cCXwoAR-DFxjpdjdIo"},
 ]
+
+
+def load_previous() -> dict:
+    """Load last saved results so a failed request never wipes good data."""
+    try:
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            return {r["id"]: r for r in json.load(f) if isinstance(r, dict) and "id" in r}
+    except Exception:
+        return {}
 
 
 def scrape_google(business: dict) -> dict:
@@ -63,15 +74,35 @@ def scrape_google(business: dict) -> dict:
 
 def main():
     print("=== Google Reviews Scraper ===\n")
-    results = [scrape_google(b) for b in BUSINESSES]
+    previous = load_previous()
+    results = []
+    failed = 0
 
-    output_file = "google_reviews.json"
-    with open(output_file, "w", encoding="utf-8") as f:
+    for b in BUSINESSES:
+        fresh = scrape_google(b)
+        if fresh["error"]:
+            failed += 1
+            old = previous.get(b["id"])
+            # Keep the last known good numbers instead of overwriting with nulls
+            if old and old.get("total_reviews") is not None:
+                print(f"    ↩ Keeping previous data for {b['id']}")
+                kept = dict(old)
+                kept["error"] = f"Latest refresh failed, showing previous data: {fresh['error']}"
+                results.append(kept)
+                continue
+        results.append(fresh)
+
+    # If every request failed, don't touch the file and make the run show red
+    if failed == len(BUSINESSES):
+        print("\n✗ All requests failed — leaving existing google_reviews.json untouched.")
+        print("  Check your Google Cloud billing and that Places API is enabled for the key.")
+        sys.exit(1)
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
-    print(f"\n=== Done! Results saved to {output_file} ===")
-    errors = sum(1 for r in results if r["error"])
-    print(f"Success: {len(results) - errors} | Errors: {errors}")
+    print(f"\n=== Done! Results saved to {OUTPUT_FILE} ===")
+    print(f"Success: {len(BUSINESSES) - failed} | Errors: {failed}")
 
 
 if __name__ == "__main__":
